@@ -47,6 +47,11 @@ function G2G.obj.OnEnter(self)
 	tip:Show()
 end
 
+function G2G.obj.OnClick(self, button)
+	GameTooltip:Hide()
+	Guild2Guild:RequestPlayerInfos()
+end
+
 function G2G:playerOnline(event, player, guild, note)
 	G2G.OnlineUsers[player] = G2G.OnlineUsers[player] or {}
 	G2G.OnlineUsers[player].guild = guild or ""
